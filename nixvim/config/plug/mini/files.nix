@@ -21,7 +21,7 @@ in
   keymaps = lib.mkIf (config.plugins.mini.enable && lib.hasAttr "files" config.plugins.mini.modules) [
     {
       mode = "n";
-      key = "-";
+      key = "<leader>e";
       action = ":lua  MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>";
       options = {
         desc = "Open file explorer cwd";
@@ -30,7 +30,7 @@ in
     }
     {
       mode = "n";
-      key = "_";
+      key = "-";
       action = ":lua  MiniFiles.open()<CR>";
       options = {
         desc = "Open file explorer";

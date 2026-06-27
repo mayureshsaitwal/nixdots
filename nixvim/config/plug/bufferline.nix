@@ -1,11 +1,11 @@
 { config, lib, ... }:
 let
-  colors = import ../../colors/${config.theme}.nix { };
+  colors = import ../colors/${config.theme}.nix { };
 in
 {
   plugins = {
     bufferline = {
-      enable = false;
+      enable = true;
       settings = {
         options = {
           separator_style = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”

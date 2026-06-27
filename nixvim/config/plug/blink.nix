@@ -26,7 +26,10 @@ in
 
       settings = {
         keymap = {
-          preset = "super-tab";
+          preset = "default";
+          "[<C-u>]" = [
+            "select_and_accept"
+          ];
         };
         signature = {
           enabled = true;
@@ -48,7 +51,7 @@ in
           ];
           providers = {
             ripgrep = {
-              name = "Ripgrep";
+              name = "rg";
               module = "blink-ripgrep";
               score_offset = 1;
             };

@@ -20,11 +20,15 @@ in
         win = {
           input = {
             keys.__raw = ''
-              {
-                ["<c-t>"] = {
-                  "trouble_open",
-                  mode = { "n", "i" },
-                },
+                {
+                  ["<c-t>"] = {
+                    "trouble_open",
+                    mode = { "n", "i" },
+                  },
+                  ["JK"] = {
+                    "close",
+                    mode = {"n", "i"},
+                  },
               }
             '';
           };
@@ -212,7 +216,7 @@ in
           }
           {
             mode = "n";
-            key = "<leader>f/";
+            key = "<leader>fc";
             action = "<cmd>lua Snacks.picker.lines()<cr>";
             options = {
               desc = "Fuzzy find in current buffer";

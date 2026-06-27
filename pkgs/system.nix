@@ -4,6 +4,7 @@
     git
     curl
     vim
+    man
     wget
     ntfs3g
     tree

@@ -10,7 +10,7 @@
     ./indent.nix
     ./lazygit.nix
     ./notifier.nix
-    # ./picker.nix
+    ./picker.nix
     ./rename.nix
   ];
 }
