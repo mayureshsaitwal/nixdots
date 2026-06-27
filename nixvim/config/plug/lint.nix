@@ -8,7 +8,7 @@
   extraPackages = with pkgs; [ shfmt ];
   plugins = {
     lint = {
-      enable = true;
+      enable = false;
 
       lazyLoad.settings.event = "DeferredUIEnter";
 

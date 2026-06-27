@@ -1,6 +1,6 @@
 _: {
   imports = [
-    ./alpha.nix
+    # ./alpha.nix
     ./autopairs.nix
     ./blink.nix
     ./bufferline.nix

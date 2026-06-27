@@ -1,0 +1,419 @@
+
+sourcing "nvim_exec2()"
+finished sourcing nvim_exec2()
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/ftplugin.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/ftplugin.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/indent.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/indent.vim
+could not source "/etc/xdg/nvim/sysinit.vim"
+could not source "$VIM/sysinit.vim"
+line 0: sourcing "nvim_exec2() called at VIMINIT:0"
+finished sourcing nvim_exec2() called at VIMINIT:0
+continuing in VIMINIT
+line 0: sourcing "nvim_exec2() called at VIMINIT:0"
+Error in VIMINIT..script nvim_exec2() called at VIMINIT:0:
+line    1:
+E216: No such group or event: FileExplorer *
+finished sourcing nvim_exec2() called at VIMINIT:0
+continuing in VIMINIT
+line 0: sourcing "nvim_exec2() called at VIMINIT:0"
+finished sourcing nvim_exec2() called at VIMINIT:0
+continuing in VIMINIT
+NVIM v0.12.3
+Build type: Release
+LuaJIT 2.1.1774638290
+Vim versions: 8.1, 8.2, 9.0, 9.1, 9.2
+
+   system vimrc file: "$VIM/sysinit.vim"
+  fall-back for $VIM: "
+/nix/store/a96v7ma6k0fwzmrrqn1fqb8flyddakj4-neovim-unwrapped-0.12.3/share/nvim
+"
+
+Run :checkhealth for more info
+                     Error in VIMINIT:
+E5108: Lua: /nix/store/v6kyll84xgsb9mrg3vql8iccminpr2fj-init.lua:0: attempt to call a nil value
+stack traceback:
+	/nix/store/v6kyll84xgsb9mrg3vql8iccminpr2fj-init.lua: in function </nix/store/v6kyll84xgsb9mrg3vql8iccminpr2fj-init.lua:0>
+	[C]: in function 'dofile'
+	[string ":lua"]:11: in main chunk
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/filetype.lua"
+line 0: sourcing "nvim_exec2() called at /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/filetype.lua:0"
+not found in runtime path: "ftdetect/*.{vim,lua}"
+finished sourcing nvim_exec2() called at /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/filetype.lua:0
+continuing in /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/filetype.lua
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/filetype.lua
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/syntax/syntax.vim"
+line 20: sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/syntax/synload.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/syntax/synload.vim
+continuing in /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/syntax/syntax.vim
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/syntax/syntax.vim
+sourcing "/home/jd1t/.nix-profile/share/nvim/site/plugin/fzf.vim"
+finished sourcing /home/jd1t/.nix-profile/share/nvim/site/plugin/fzf.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/gzip.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/gzip.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/matchit.vim"
+not found in 'packpath': "pack/*/start/matchit"
+line 3: sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+continuing in /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/matchit.vim
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/matchit.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/matchparen.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/matchparen.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/netrwPlugin.vim"
+not found in 'packpath': "pack/*/start/netrw"
+line 7: sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+continuing in /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/netrwPlugin.vim
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/netrwPlugin.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/rplugin.vim"
+line 3: sourcing "/nix/store/na2agldwhh2zjffyhqmq9wjw4h4hnvdk-neovim-0.12.3/rplugin.vim"
+finished sourcing /nix/store/na2agldwhh2zjffyhqmq9wjw4h4hnvdk-neovim-0.12.3/rplugin.vim
+continuing in <SNR>57_LoadRemotePlugins  1: ~/nixdots/nixvim/vim/_core/defaults
+  2: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/ftplugin.vim
+  3: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/indent.vim
+  4: /nix/store/v6kyll84xgsb9mrg3vql8iccminpr2fj-init.lua
+  5: /nix/store/vr0fkn81xfx39wgkviswg7lkygqrrm6f-vimplugin-luajit2.1-lz.n-2.11.3-1-unstable-2.11.3-1/lua/lz/n/handler/event.lua
+  6: /nix/store/vr0fkn81xfx39wgkviswg7lkygqrrm6f-vimplugin-luajit2.1-lz.n-2.11.3-1-unstable-2.11.3-1/lua/lz/n/handler/cmd.lua
+  7: /nix/store/bzr29qqcv50k514k48bi1s030vzlhnsd-vimplugin-base16-nvim-0-unstable-2026-05-03/lua/base16-colorscheme.lua
+  8: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/lua/vim/diagnostic.lua
+  9: /nix/store/rh3vhsrp2lc5bkd4aphyc94i8vbyhfw0-vimplugin-luajit2.1-nvim-web-devicons-0.100-1-unstable-0.100-1/lua/nvim-web-devicons.lua
+ 10: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/ai.lua
+ 11: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/align.lua
+ 12: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/clue.lua
+ 13: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/cursorword.lua
+ 14: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/diff.lua
+ 15: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/files.lua
+ 16: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/hipatterns.lua
+ 17: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/indentscope.lua
+ 18: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/pairs.lua
+ 19: /nix/store/znmsnwgd9hgnib6nsmi14hmnpdnr9qw2-vimplugin-mini.nvim-0.17.0-unstable-2026-06-07/lua/mini/surround.lua
+ 20: /nix/store/yf3rz7l42mz2fqj2nczl1sip3jxwhb8f-vimplugin-which-key.nvim-3.17.0-unstable-2025-10-28/lua/which-key/config.lua
+ 21: /nix/store/zsl1x2n080pr5zfb2mrwnzgkdkhsyvp3-vimplugin-trouble.nvim-3.7.1-unstable-2025-10-31/lua/trouble/config/highlights.lua
+ 22: /nix/store/zsl1x2n080pr5zfb2mrwnzgkdkhsyvp3-vimplugin-trouble.nvim-3.7.1-unstable-2025-10-31/lua/trouble/config/init.lua
+ 23: /nix/store/zsl1x2n080pr5zfb2mrwnzgkdkhsyvp3-vimplugin-trouble.nvim-3.7.1-unstable-2025-10-31/lua/trouble/view/main.lua
+ 24: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/lua/vim/treesitter/query.lua
+ 25: /nix/store/398vjv8lywpxqpkidgr83m0xm1bv4w20-vimplugin-nvim-spectre-0-unstable-2025-05-13/lua/spectre/highlight.lua
+ 26: /nix/store/kdsfyn64ghjxgry0panl4pyf1l0s957p-vimplugin-snacks.nvim-2.31.0-unstable-2026-05-25/lua/snacks/init.lua
+ 27: /nix/store/xpjislmzcsm0c7wi8a42fykiq5pwnl6x-vimplugin-nvim-autopairs-0.10.0-unstable-2026-05-08/lua/nvim-autopairs.lua
+ 28: /nix/store/kkkp0xbwsd631d8hqv19pc1z2hhmd2vy-vimplugin-none-ls.nvim-0-unstable-2026-06-02/lua/null-ls/config.lua
+ 29: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/lua/vim/lsp.lua
+ 30: /nix/store/kkkp0xbwsd631d8hqv19pc1z2hhmd2vy-vimplugin-none-ls.nvim-0-unstable-2026-06-02/lua/null-ls/init.lua
+ 31: /nix/store/fpys35zcvc6cvl5w3qkcwyil84jyh1b4-vimplugin-mini.colors-0.17.0-unstable-2026-05-12/lua/mini/colors.lua
+ 32: /nix/store/l2zbjy66h30c0b18wri20v995kgs07i6-vimplugin-lspsaga.nvim-0-unstable-2026-05-14/lua/lspsaga/highlight.lua
+ 33: /nix/store/l2zbjy66h30c0b18wri20v995kgs07i6-vimplugin-lspsaga.nvim-0-unstable-2026-05-14/lua/lspsaga/symbol/head.lua
+ 34: /nix/store/9a1dg8hpc8xmi2xg89y7ljkbl5kqacrw-vimplugin-lsp-format.nvim-2.7.3/lua/lsp-format/init.lua
+ 35: /nix/store/l1zjlil0lw7dwg8gf9dh9cc37sgn5qxn-vimplugin-hop.nvim-2.7.2-unstable-2025-08-22/lua/hop/highlight.lua
+ 36: /nix/store/l1zjlil0lw7dwg8gf9dh9cc37sgn5qxn-vimplugin-hop.nvim-2.7.2-unstable-2025-08-22/lua/hop-yank/init.lua
+ 37: /nix/store/l1zjlil0lw7dwg8gf9dh9cc37sgn5qxn-vimplugin-hop.nvim-2.7.2-unstable-2025-08-22/lua/hop-treesitter/init.lua
+ 38: /nix/store/qh461bagv7c26lw8464irny87smzcqkb-vimplugin-git-blame.nvim-0-unstable-2025-11-05/lua/gitblame/init.lua
+ 39: /nix/store/sjw7fli752vd7973wrl0rxlc5cg5bps8-vimplugin-luajit2.1-fidget.nvim-1.6.0-1-unstable-1.6.0-1/lua/fidget/progress.lua
+ 40: /nix/store/sjw7fli752vd7973wrl0rxlc5cg5bps8-vimplugin-luajit2.1-fidget.nvim-1.6.0-1-unstable-1.6.0-1/lua/fidget/commands.lua
+ 41: /nix/store/ggrbisy6ihm9s3v48mmxnn15cdq2fqbv-vimplugin-copilot.lua-2.0.4/lua/copilot/client/init.lua
+ 42: /nix/store/ggrbisy6ihm9s3v48mmxnn15cdq2fqbv-vimplugin-copilot.lua-2.0.4/lua/copilot/panel/init.lua
+ 43: /nix/store/ggrbisy6ihm9s3v48mmxnn15cdq2fqbv-vimplugin-copilot.lua-2.0.4/lua/copilot/suggestion/init.lua
+ 44: /nix/store/hsl5cx9sajm2hb29aq3mjqiq6sgrnbgp-vimplugin-comment.nvim-0.8.0-unstable-2024-06-09/lua/Comment/init.lua
+ 45: /nix/store/418h3a3v8dydhcyhxs4gi10sds0yfqsk-vimplugin-blink.cmp-1.10.2/lua/blink/cmp/lib/utils.lua
+ 46: /nix/store/5p2axfgazq670bh1bhgvrinhzhl0wdin-vimplugin-alpha-nvim-0-unstable-2026-04-17/lua/alpha.lua
+ 47: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/filetype.lua
+ 48: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/syntax/syntax.vim
+ 49: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/syntax/synload.vim
+ 50: /nix/store/0lh7drd3w8mvs8h3145g17x8jy5ids8d-fzf-0.73.1/share/vim-plugins/fzf/plugin/fzf.vim
+ 51: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/gzip.vim
+ 52: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/matchit.vim
+ 53: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+ 54: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/matchparen.vim
+ 55: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/netrwPlugin.vim
+ 56: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+ 57: /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/rplugin.vim
+ 58: /nix/store/na2agldwhh2zjffyhqmq9wjw4h4hnvdk-neovim-0.12.3/rplugin.vim
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/rplugin.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/tarPlugin.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/tarPlugin.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/tutor.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/tutor.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/zipPlugin.vim"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/zipPlugin.vim
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/editorconfig.lua"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/editorconfig.lua
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/man.lua"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/man.lua
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/net.lua"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/net.lua
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/osc52.lua"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/osc52.lua
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/shada.lua"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/shada.lua
+sourcing "/nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/spellfile.lua"
+finished sourcing /nix/store/xww8k8mqrxyq8cqy15cwdibn65bgv86x-neovim-byte-compiled-0.12.3/share/nvim/runtime/plugin/spellfile.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/blink.cmp/plugin/blink-cmp.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/blink.cmp/plugin/blink-cmp.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/comment.nvim/plugin/Comment.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/comment.nvim/plugin/Comment.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/copilot-lsp/plugin/copilot-lsp.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/copilot-lsp/plugin/copilot-lsp.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/copilot.lua/plugin/copilot.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/copilot.lua/plugin/copilot.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/git-blame.nvim/plugin/gitblame.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/git-blame.nvim/plugin/gitblame.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/hop.nvim/plugin/hop.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/hop.nvim/plugin/hop.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/lspsaga.nvim/plugin/lspsaga.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/lspsaga.nvim/plugin/lspsaga.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/markview.nvim/plugin/markview.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/markview.nvim/plugin/markview.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/neovim-trunk/plugin/trunk.vim"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/neovim-trunk/plugin/trunk.vim
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-lspconfig/plugin/lspconfig.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-lspconfig/plugin/lspconfig.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-spectre/plugin/spectre.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-spectre/plugin/spectre.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-treesitter/plugin/filetypes.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-treesitter/plugin/filetypes.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-treesitter/plugin/nvim-treesitter.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-treesitter/plugin/nvim-treesitter.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-treesitter/plugin/query_predicates.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-treesitter/plugin/query_predicates.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-web-devicons/plugin/nvim-web-devicons.vim"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/plenary.nvim/plugin/plenary.vim"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/plenary.nvim/plugin/plenary.vim
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/smart-splits.nvim/plugin/init.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/smart-splits.nvim/plugin/init.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/smart-splits.nvim/plugin/smart-splits.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/smart-splits.nvim/plugin/smart-splits.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/snacks.nvim/plugin/snacks.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/snacks.nvim/plugin/snacks.lua
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/undotree/plugin/undotree.vim"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/undotree/plugin/undotree.vim
+sourcing "/nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/which-key.nvim/plugin/which-key.lua"
+finished sourcing /nix/store/4rbj6wb72mw29qvf7drh983jgxhwwkpf-packdir-start/pack/myNeovimPackages/start/which-key.nvim/plugin/which-key.lua
+not found in 'packpath': "start/*"
+not found in runtime path: "plugin/**/*"
+Reading ShaDa file "/home/jd1t/.local/state/nvim/shada/main.shada" info marks oldfiles
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+not found in runtime path: "lua/lualine/components/.lua"
+not found in runtime path: "lua/lualine/components//init.lua"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+--- Autocommands ---
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+--- Autocommands ---
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+--- Autocommands ---
+lualine  BufEnter
+    *         lua require'lualine.components.diff.git_diff'.update_diff_args()
+	Last set from /nix/store/wcrn3kmg4mq61x3zwh9jnfkq52j0gqj5-vimplugin-luajit2.1-lualine.nvim-scm-5-unstable-scm-5/lua/lualine/utils/utils.lua (run Nvim with -V1 for more details)
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+not found in runtime path: "lua/lualine/components/.lua"
+not found in runtime path: "lua/lualine/components//init.lua"
+not found in runtime path: "lua/lualine/components/diagnostic.lua"
+not found in runtime path: "lua/lualine/components/diagnostic/init.lua"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+not found in runtime path: "lua/lualine/components/.lua"
+not found in runtime path: "lua/lualine/components//init.lua"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+--- Autocommands ---
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+line 0: sourcing "nvim_exec2() called at BufEnter Autocommands for "*":0"
+finished sourcing nvim_exec2() called at BufEnter Autocommands for "*":0
+continuing in BufEnter Autocommands for "*"
+Writing ShaDa file "/home/jd1t/.local/state/nvim/shada/main.shada"
+vim.lsp.get_active_clients() is deprecated. Run ":checkhealth vim.deprecated" for more information

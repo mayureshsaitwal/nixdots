@@ -3,95 +3,6 @@
 
   keymaps = [
     # General maps
-    # {
-    #   mode = "n";
-    #   key = "<leader>/";
-    #   action = "<cmd>nohl<CR>";
-    # }
-    # {
-    #   mode = "n";
-    #   key = "<leader>f";
-    #   action = "+find/file";
-    # }
-    #
-    # {
-    #   mode = "n";
-    #   key = "<leader>s";
-    #   action = "+search";
-    # }
-    #
-    # {
-    #   mode = "n";
-    #   key = "<leader>q";
-    #   action = "+quit/session";
-    # }
-
-    # {
-    #   mode = [
-    #     "n"
-    #     "v"
-    #   ];
-    #   key = "<leader>g";
-    #   action = "+git";
-    # }
-
-    # {
-    #   mode = "n";
-    #   key = "<leader>u";
-    #   action = "+ui";
-    # }
-
-    # {
-    #   mode = "n";
-    #   key = "<leader>w";
-    #   action = "+windows";
-    # }
-    #
-    # {
-    #   mode = "n";
-    #   key = "<leader><Tab>";
-    #   action = "+tab";
-    # }
-    #
-    # {
-    #   mode = [
-    #     "n"
-    #     "v"
-    #   ];
-    #   key = "<leader>d";
-    #   action = "+debug";
-    # }
-    #
-    # {
-    #   mode = [
-    #     "n"
-    #     "v"
-    #   ];
-    #   key = "<leader>c";
-    #   action = "+code";
-    # }
-    #
-    # # Tabs
-    # {
-    #   mode = "n";
-    #   key = "<leader><tab><tab>";
-    #   action = "<cmd>tabnew<cr>";
-    #   options = {
-    #     silent = true;
-    #     desc = "New Tab";
-    #   };
-    # }
-    #
-    # {
-    #   mode = "n";
-    #   key = "<leader><tab>d";
-    #   action = "<cmd>tabclose<cr>";
-    #   options = {
-    #     silent = true;
-    #     desc = "Close tab";
-    #   };
-    # }
-
     {
       mode = "n";
       key = "<C-w>";
@@ -101,27 +12,6 @@
         desc = "Close tab";
       };
     }
-    # Windows
-    # {
-    #   mode = "n";
-    #   key = "<leader>ww";
-    #   action = "<C-W>p";
-    #   options = {
-    #     silent = true;
-    #     desc = "Other window";
-    #   };
-    # }
-
-    # {
-    #   mode = "n";
-    #   key = "<leader>wd";
-    #   action = "<C-W>c";
-    #   options = {
-    #     silent = true;
-    #     desc = "Delete window";
-    #   };
-    # }
-
     {
       mode = "n";
       key = "<leader>wj";
@@ -193,15 +83,6 @@
     }
 
     # Quit/Session
-    # {
-    #   mode = "n";
-    #   key = "<leader>qq";
-    #   action = "<cmd>quitall<cr><esc>";
-    #   options = {
-    #     silent = true;
-    #     desc = "Quit all";
-    #   };
-    # }
 
     # JK combinations to save,quit and exit
     {
@@ -301,27 +182,6 @@
         desc = "Copy Current Line and Paste to next Line";
       };
     }
-
-    # {
-    #   mode = "n";
-    #   key = "<leader>ul";
-    #   action = ":lua ToggleLineNumber()<cr>";
-    #   options = {
-    #     silent = true;
-    #     desc = "Toggle Line Numbers";
-    #   };
-    # }
-    #
-    # {
-    #   mode = "n";
-    #   key = "<leader>uL";
-    #   action = ":lua ToggleRelativeLineNumber()<cr>";
-    #   options = {
-    #     silent = true;
-    #     desc = "Toggle Relative Line Numbers";
-    #   };
-    # }
-
     {
       mode = "n";
       key = "<leader>uw";
@@ -534,96 +394,47 @@
         desc = "Previous buffer";
       };
     }
-    {
-      mode = "n";
-      key = "f";
-      action = ":lua HopfAfter()<CR>";
-      options = {
-        desc = "Hop f Char Forward";
-        silent = true;
-        remap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "F";
-      action = ":lua HopfBefore()<CR>";
-      options = {
-        desc = "Hop f Char Backward";
-        silent = true;
-        remap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "t";
-      action = ":lua HoptAfter()<CR>";
-      options = {
-        desc = "Hop t Char Forward";
-        silent = true;
-        remap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "T";
-      # action = ":lua HoptBefore()<CR>";
-      action = ''
-        :lua function()
-        require'hop'.hint_char1({
-          direction = require'hop.hint'.HintDirection.BEFORE_CURSOR,
-          current_line_only = true,
-          hint_offset = 1
-        })
-        end<cr>
-      '';
-      options = {
-        desc = "Hop t Char Backward";
-        silent = true;
-        remap = true;
-      };
-    }
   ];
-  extraConfigLua = ''
-    function ToggleLineNumber()
-    if vim.wo.number then
-      vim.wo.number = false
-    else
-      vim.wo.number = true
-        vim.wo.relativenumber = false
-        end
-        end
-
-        function ToggleRelativeLineNumber()
-        if vim.wo.relativenumber then
-          vim.wo.relativenumber = false
-        else
-          vim.wo.relativenumber = true
-            vim.wo.number = false
-            end
-            end
-
-            function ToggleWrap()
-            vim.wo.wrap = not vim.wo.wrap
-            end
-
-    local hop = require('hop')
-    local directions = require('hop.hint').HintDirection
-
-    function HopfAfter()
-      hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-    end
-
-    function HopfBefore()
-      hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-    end
-
-    function HoptAfter()
-      hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
-    end
-
-    function HoptBefore()
-      hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
-    end
-  '';
+  # extraConfigLua = ''
+  #   function ToggleLineNumber()
+  #   if vim.wo.number then
+  #     vim.wo.number = false
+  #   else
+  #     vim.wo.number = true
+  #       vim.wo.relativenumber = false
+  #       end
+  #       end
+  #
+  #       function ToggleRelativeLineNumber()
+  #       if vim.wo.relativenumber then
+  #         vim.wo.relativenumber = false
+  #       else
+  #         vim.wo.relativenumber = true
+  #           vim.wo.number = false
+  #           end
+  #           end
+  #
+  #           function ToggleWrap()
+  #           vim.wo.wrap = not vim.wo.wrap
+  #           end
+  #
+  #   local hop = require('hop')
+  #   local directions = require('hop.hint').HintDirection
+  #
+  #   function HopfAfter()
+  #     hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+  #   end
+  #
+  #   function HopfBefore()
+  #     hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+  #   end
+  #
+  #   function HoptAfter()
+  #     hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
+  #   end
+  #
+  #   function HoptBefore()
+  #     hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
+  #   end
+  # '';
 }

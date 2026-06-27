@@ -106,7 +106,7 @@ in
         lualine_y = [ "" ];
         lualine_z = [
           {
-            __unkeyed = "diagnostic";
+            __unkeyed = "diagnostics";
             symbols = {
               error = " ";
               warn = " ";
