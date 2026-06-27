@@ -22,6 +22,7 @@ _: {
     ./smartsplits.nix
     ./snacks
     ./spectre.nix
+    ./tabout.nix
     ./telescope.nix
     ./treesittertextobjects.nix
     ./treesitter.nix

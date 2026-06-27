@@ -6,6 +6,20 @@
       command = "norm zz";
     }
 
+    # Diagnostic cursorLine only
+    {
+      event = "FileType";
+      pattern = "Trouble";
+      callback = {
+        __raw = ''
+          function()
+            vim.opt_local.cursorline = true
+            vim.api.nvim_set_hl(0, "CursorLine", { bg = "#2a2a2a" })
+          end
+        '';
+      };
+    }
+
     # Open help in a vertical split
     {
       event = "FileType";

@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   main,
@@ -101,14 +100,17 @@
   #   enable = true;
   #   fallbackDns = [ "1.1.1.1" "8.8.8.8" ];
   # };
-  services.resolved.enable = true;
+  # services.resolved.enable = true;
 
-  services.resolved.settings = {
-    Resolve = {
-      FallbackDNS = [
-        "1.1.1.1"
-        "8.8.8.8"
-      ];
+  services.resolved = {
+    enable = true;
+    settings = {
+      Resolve = {
+        FallbackDNS = [
+          "1.1.1.1"
+          "8.8.8.8"
+        ];
+      };
     };
   };
 
@@ -124,6 +126,7 @@
   };
 
   services.blueman.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";

@@ -27,7 +27,7 @@ in
       settings = {
         keymap = {
           preset = "default";
-          "[<C-u>]" = [
+          "<C-u>" = [
             "select_and_accept"
           ];
         };
