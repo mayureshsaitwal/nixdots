@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -35,5 +34,6 @@
     localsend
     live-server
     foliate
+    exercism
   ];
 }

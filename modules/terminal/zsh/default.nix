@@ -46,36 +46,37 @@
         "direnv"
       ];
     };
-plugins = with pkgs; [
-  {
-    name = "zsh-autopair";
-    src = fetchFromGitHub {
-      owner = "hlissner";
-      repo = "zsh-autopair";
-      rev = "449a7c3d095bc8f3d78cf37b9549f8bb4c383f3d";
-      hash = "sha256-3zvOgIi+q7+sTXrT+r/4v98qjeiEL4Wh64rxBYnwJvQ=";
-    };
-    file = "autopair.zsh";
-  }
+    plugins = with pkgs; [
+      {
+        name = "zsh-autopair";
+        src = fetchFromGitHub {
+          owner = "hlissner";
+          repo = "zsh-autopair";
+          rev = "449a7c3d095bc8f3d78cf37b9549f8bb4c383f3d";
+          hash = "sha256-3zvOgIi+q7+sTXrT+r/4v98qjeiEL4Wh64rxBYnwJvQ=";
+        };
+        file = "autopair.zsh";
+      }
 
-  {
-    name = "fast-syntax-highlighting";
-    src = fetchFromGitHub {
-      owner = "zdharma-continuum";
-      repo = "fast-syntax-highlighting";
-      rev = "cf318e06a9b7c9f2219d78f41b46fa6e06011fd9";
-      hash = "sha256-RVX9ZSzjBW3LpFs2W86lKI6vtcvDWP6EPxzeTcRZua4=";
-    };
-    file = "fast-syntax-highlighting.plugin.zsh";
-  }
-];
+      {
+        name = "fast-syntax-highlighting";
+        src = fetchFromGitHub {
+          owner = "zdharma-continuum";
+          repo = "fast-syntax-highlighting";
+          rev = "cf318e06a9b7c9f2219d78f41b46fa6e06011fd9";
+          hash = "sha256-RVX9ZSzjBW3LpFs2W86lKI6vtcvDWP6EPxzeTcRZua4=";
+        };
+        file = "fast-syntax-highlighting.plugin.zsh";
+      }
+    ];
 
-  initContent = ''
-    source ${./alias.zsh}
-    autopair-init
-  '';
+    initContent = ''
+      source ${./alias.zsh}
+      autopair-init
+      bindkey '^U' autosuggest-accept
+    '';
 
-      # kitty +kitten icat --align right -n $(shuf -n 1 /mnt/win1/Myself/Pokemon/pokemon_gifs.txt)
+    # kitty +kitten icat --align right -n $(shuf -n 1 /mnt/win1/Myself/Pokemon/pokemon_gifs.txt)
     # kitty +kitten icat --align right -n $(find /mnt/win1/Myself/Pokemon/gifs -type f | shuf -n 1)
     # NEWLINE=$'\n'
     # if [[ -z "$FIRST_PROMPT" ]]; then

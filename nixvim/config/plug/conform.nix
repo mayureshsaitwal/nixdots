@@ -59,6 +59,10 @@
         python = [ "black" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
+        cpp = [ "clang-format" ];
+        c = [ "clang-format" ];
+        h = [ "clang-format" ];
+        hpp = [ "clang-format" ];
         markdown = [
           [
             "prettierd"

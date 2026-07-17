@@ -15,7 +15,7 @@ in
       width_preview = 100;
     };
     mappings = {
-      synchronize = "s";
+      synchronize = "J";
     };
   };
   keymaps = lib.mkIf (config.plugins.mini.enable && lib.hasAttr "files" config.plugins.mini.modules) [

@@ -53,6 +53,9 @@
     # spotify
     direnv
     clang-tools
+    clang
+    cmake
+    gdb
 
     pulseaudio
     bat
@@ -69,7 +72,7 @@
         isort
         beautifulsoup4
         black
-        osmnx
+        # osmnx
         jupyter-core
         pyyaml
         nbformat
@@ -134,5 +137,6 @@
 
     nsxiv
     feh
+    impala
   ];
 }
