@@ -53,7 +53,7 @@ in
             ripgrep = {
               name = "rg";
               module = "blink-ripgrep";
-              score_offset = 1;
+              score_offset = 20;
             };
             # dictionary = {
             #   name = "Dict";
@@ -71,7 +71,25 @@ in
             #   async = true;
             #   score_offset = 100;
             # };
-            lsp.score_offset = 4;
+            # lsp.score_offset = 4;
+            lsp = {
+              score_offset = 4;
+              transform_items.__raw = ''
+                function(_, items)
+                  local kinds = require("blink.cmp.types").CompletionItemKind
+
+                  for _, item in ipairs(items) do
+                    if item.kind == kinds.Class then
+                      item.score_offset = 100
+                    elseif item.kind == kinds.Interface then
+                      item.score_offset = -100
+                    end
+                  end
+
+                  return items
+                end
+              '';
+            };
             spell = {
               name = "Spell";
               module = "blink-cmp-spell";

@@ -23,6 +23,7 @@
     hyprpicker
     mpvpaper
     hyprpaper
+    grimblast
     smplayer
     # nix-init
     # nix-update
@@ -35,5 +36,7 @@
     live-server
     foliate
     exercism
+
+    # vscode-extensions.vadimcn.vscode-lldb
   ];
 }

@@ -71,7 +71,7 @@
             action = "workspace_symbol";
             desc = "Workspace Symbol";
           };
-          "<leader>cr" = {
+          "<leader>rn" = {
             action = "rename";
             desc = "Rename";
           };
@@ -81,11 +81,11 @@
             action = "open_float";
             desc = "Line Diagnostics";
           };
-          "[d" = {
+          "]d" = {
             action = "goto_next";
             desc = "Next Diagnostic";
           };
-          "]d" = {
+          "[d" = {
             action = "goto_prev";
             desc = "Previous Diagnostic";
           };

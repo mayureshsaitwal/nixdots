@@ -138,5 +138,7 @@
     nsxiv
     feh
     impala
+    yt-dlp
+    ffmpeg
   ];
 }
