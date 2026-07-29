@@ -79,7 +79,9 @@ in
                   local kinds = require("blink.cmp.types").CompletionItemKind
 
                   for _, item in ipairs(items) do
-                    if item.kind == kinds.Class then
+                    if item.kind == kinds.Variable then
+                      item.score_offset = 200
+                    elseif item.kind == kinds.Class then
                       item.score_offset = 100
                     elseif item.kind == kinds.Interface then
                       item.score_offset = -100

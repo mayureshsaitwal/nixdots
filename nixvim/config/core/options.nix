@@ -17,6 +17,7 @@
       # Enable auto indenting and set it to spaces
       autoindent = true;
       smartindent = true;
+      cindent = true;
       shiftwidth = 2;
 
       # Enable incremental searching

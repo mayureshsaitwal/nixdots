@@ -156,14 +156,14 @@ in
               desc = "Find projects";
             };
           }
-          # {
-          #   mode = "n";
-          #   key = "<leader>fr";
-          #   action = ''<cmd>lua Snacks.picker.registers()<cr>'';
-          #   options = {
-          #     desc = "Find registers";
-          #   };
-          # }
+          {
+            mode = "n";
+            key = "<leader>fr";
+            action = "<cmd>lua Snacks.picker.registers()<cr>";
+            options = {
+              desc = "Find registers";
+            };
+          }
           {
             mode = "n";
             key = "<leader>fs";
