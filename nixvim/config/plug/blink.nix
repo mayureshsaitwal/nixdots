@@ -37,9 +37,9 @@ in
 
         sources = {
           default = [
+            "path"
             "buffer"
             "lsp"
-            "path"
             "snippets"
             # Community
             # "copilot"
