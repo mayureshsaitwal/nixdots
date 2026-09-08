@@ -137,8 +137,15 @@
 
     nsxiv
     feh
-    impala
+    # impala
+    wifitui
     yt-dlp
     ffmpeg
+
+    gamemode
+    mangohud
+    heroic
+    lutris
+    bibata-cursors
   ];
 }

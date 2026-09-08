@@ -36,6 +36,14 @@
     live-server
     foliate
     exercism
+    libsecret
+    seahorse
+    deadlock-mod-manager
+    # AudioRelay
+
+    # openrazer-daemon
+    polychromatic
+    quickshell
 
     # vscode-extensions.vadimcn.vscode-lldb
   ];

@@ -126,7 +126,8 @@
   };
 
   services.blueman.enable = true;
-  services.gnome.gnome-keyring.enable = true;
+  # services.gnome.gnome-keyring.enable = true;
+  # security.pam.services.login.enableGnomeKeyring = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
@@ -189,6 +190,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "openrazer"
     ];
     shell = pkgs.zsh;
     # packages = with pkgs; [

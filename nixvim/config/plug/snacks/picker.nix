@@ -182,7 +182,7 @@ in
           }
           {
             mode = "n";
-            key = "<leader>fw";
+            key = "<leader>fg";
             action = "<cmd>lua Snacks.picker.grep()<cr>";
             options = {
               desc = "Live grep";

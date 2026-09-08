@@ -265,6 +265,19 @@
       };
     }
 
+    # Copy the deleted content into buffer
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>dd";
+      action = "dd";
+      options = {
+        desc = "Copy the deleted into register";
+      };
+    }
+
     # Delete to void register
     {
       mode = [
@@ -394,6 +407,17 @@
         desc = "Previous buffer";
       };
     }
+
+    # Select All
+    {
+      mode = "n";
+      key = "<C-a>";
+      action = "ggVG";
+      options = {
+        desc = "Select All Content";
+      };
+    }
+
   ];
   # extraConfigLua = ''
   #   function ToggleLineNumber()

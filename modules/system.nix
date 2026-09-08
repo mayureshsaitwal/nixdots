@@ -1,8 +1,10 @@
-_ : {
- imports = [
-	# ./systemd
-	# ./services
-	./wm/hyprland
-  ./scripts
- ];
+_: {
+  imports = [
+    # ./systemd
+    # ./services
+    ./wm/hyprland
+    ./scripts
+    ./gaming
+    ./peripherals
+  ];
 }
