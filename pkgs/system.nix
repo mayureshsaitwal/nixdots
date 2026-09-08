@@ -147,5 +147,6 @@
     heroic
     lutris
     bibata-cursors
+    lazygit
   ];
 }
