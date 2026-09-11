@@ -1,4 +1,5 @@
-alias ll="ls -al";
+alias ll="colorls -al";
+alias ls="colorls"
 alias .="cd ..";
 alias rbld="cd ~/nixdots;git add .; sudo nix flake update; sudo nixos-rebuild switch --flake .  --option eval-cache false";
 # rbld = "nix-update";

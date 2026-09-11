@@ -148,5 +148,6 @@
     lutris
     bibata-cursors
     lazygit
+    colorls
   ];
 }
