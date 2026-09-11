@@ -9,6 +9,7 @@
     ./align.nix
     ./clue.nix
     ./colors.nix
+    ./comment.nix
     ./cursorword.nix
     ./diff.nix
     ./files.nix

@@ -5,7 +5,7 @@ _: {
     ./blink.nix
     ./bufferline.nix
     ./colorscheme.nix
-    ./comment.nix
+    # ./comment.nix
     ./conform.nix
     ./fidget.nix
     ./gitblame.nix
@@ -18,8 +18,10 @@ _: {
     ./lzn.nix
     ./markview.nix
     ./mini
+    ./neoscroll.nix
     ./nonels.nix
     ./smartsplits.nix
+    ./smear-cursor.nix
     ./snacks
     ./spectre.nix
     ./tabout.nix
