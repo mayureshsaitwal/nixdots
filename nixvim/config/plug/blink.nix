@@ -50,6 +50,11 @@ in
             "ripgrep"
           ];
           providers = {
+            path = {
+              name = "Path";
+              module = "blink.cmp.sources.path";
+              score_offset = 30;
+            };
             ripgrep = {
               name = "rg";
               module = "blink-ripgrep";
@@ -73,7 +78,7 @@ in
             # };
             # lsp.score_offset = 4;
             lsp = {
-              score_offset = 4;
+              score_offset = 25;
               transform_items.__raw = ''
                 function(_, items)
                   local kinds = require("blink.cmp.types").CompletionItemKind
