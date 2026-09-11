@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
     pulsemixer
     kitty
-    firefox
+    # firefox
     wofi
     telegram-desktop
     playerctl
@@ -44,6 +44,7 @@
     # openrazer-daemon
     polychromatic
     quickshell
+    neovide
 
     # vscode-extensions.vadimcn.vscode-lldb
   ];
