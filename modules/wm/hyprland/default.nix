@@ -62,6 +62,7 @@
   programs.hyprland = {
     # we use this instead of putting it in systemPackages/users
     enable = true;
+    withUWSM = true;
     xwayland.enable = true;
     #xdg.configFile.hypr = { source = ../../../configs/ }
   };
