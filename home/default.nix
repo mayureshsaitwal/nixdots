@@ -1,4 +1,9 @@
-{ pkgs, lib, main, ... }:
+{
+  pkgs,
+  lib,
+  main,
+  ...
+}:
 {
   imports = [
     ../modules/home.nix
@@ -11,18 +16,18 @@
 
   home = {
     username = main.username;
-    homeDirectory ="/home/${main.username}";
+    homeDirectory = "/home/${main.username}";
     sessionPath = [
-	  "$HOME/.local/bin"
-	  "$HOME/bin"
-	];
+      "$HOME/.local/bin"
+      "$HOME/bin"
+    ];
     # sessionPath = [
     #   "$HOME/.local/bin"
     #   "$HOME/bin"
     # ];
-	# home.file."bin".source = ../../bin;
-	# file.".config".source = ../../config;
-	# recursive = true;
+    # home.file."bin".source = ../../bin;
+    # file.".config".source = ../../config;
+    # recursive = true;
     # file =
     #   let
     #     sourceDir = ../../configs;
@@ -103,7 +108,6 @@
 
     ripgrep
     eza
-    fzf
 
     cowsay
     file

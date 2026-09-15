@@ -109,15 +109,23 @@
     # '';
   };
 
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  # programs.fzf = {
+  # programs.zoxide = {
   #   enable = true;
   #   enableZshIntegration = true;
   # };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    defaultOptions = [
+      "--height 50%"
+      "--layout=reverse"
+      "--border"
+      "--ansi"
+      "--preview 'cat {}'"
+      "--color=bg+:#293739,bg:#1B1D1E,border:#808080,spinner:#E6DB74,hl:#7E8E91,fg:#F8F8F2,header:#7E8E91,info:#A6E22E,pointer:#A6E22E,marker:#F92672,fg+:#F8F8F2,prompt:#F92672,hl+:#F92672"
+    ];
+  };
 
   # Prevent the new user dialog in zsh
   # system.userActivationScripts.zshrc = "touch .zshrc";

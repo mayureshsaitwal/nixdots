@@ -14,10 +14,11 @@
     p7zip
     ripgrep
     eza
-    fzf
+    # fzf
     cowsay
     file
     which
+    fd
     tree
     nix-output-monitor
     btop
