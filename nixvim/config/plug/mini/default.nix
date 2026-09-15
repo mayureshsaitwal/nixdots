@@ -16,6 +16,7 @@
     ./hipatterns.nix
     # ./icons.nix
     ./indentscope.nix
+    ./move.nix
     ./notify.nix
     ./pairs.nix
     ./surround.nix

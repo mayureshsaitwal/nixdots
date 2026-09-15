@@ -21,7 +21,6 @@ _: {
     ./neoscroll.nix
     ./nonels.nix
     ./smartsplits.nix
-    ./smear-cursor.nix
     ./snacks
     ./spectre.nix
     ./tabout.nix
