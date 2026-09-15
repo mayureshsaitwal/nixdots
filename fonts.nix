@@ -18,6 +18,7 @@
       nerd-fonts.fira-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.ubuntu
+      fantasque-sans-mono
     ];
 
     fontconfig = {
