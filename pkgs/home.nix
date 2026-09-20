@@ -45,6 +45,7 @@
     polychromatic
     quickshell
     neovide
+    libnotify
 
     # vscode-extensions.vadimcn.vscode-lldb
   ];
