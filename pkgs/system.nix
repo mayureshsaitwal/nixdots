@@ -59,7 +59,7 @@
     gdb
 
     pulseaudio
-		pavucontrol
+    pavucontrol
     bat
     # nil
     # at
@@ -151,5 +151,6 @@
     bibata-cursors
     lazygit
     colorls
+    util-linux
   ];
 }
