@@ -1,6 +1,6 @@
 {
   pkgs,
-  lib,
+  config,
   main,
   ...
 }:
@@ -65,14 +65,42 @@
     # };
   };
 
-  xdg.portal = {
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = with pkgs; [
+  #     xdg-desktop-portal-gtk
+  #     xdg-desktop-portal-wlr
+  #     xdg-desktop-portal-hyprland
+  #   ];
+  #   configPackages = [ pkgs.xdg-desktop-portal-gtk ];
+  # };
+
+  home.pointerCursor = {
     enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-      xdg-desktop-portal-hyprland
-    ];
-    configPackages = [ pkgs.xdg-desktop-portal-gtk ];
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24;
+  };
+
+  gtk = {
+    enable = true;
+
+    gtk4.theme = config.gtk.theme;
+    theme = {
+      package = pkgs.flat-remix-gnome;
+      name = "Flat-Remix-Darkest";
+    };
+
+    iconTheme = {
+      package = pkgs.fluent-icon-theme;
+      name = "Fluent";
+    };
+
+    font = {
+      name = "Sans";
+      size = 12;
+    };
   };
 
   # home.username = "jd1t";
