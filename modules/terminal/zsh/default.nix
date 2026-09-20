@@ -38,12 +38,39 @@
     # printf "\n$ "
     # printf "\n$ "
     # PS1=\n\n\n
+
     oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
       plugins = [
         "git"
         "direnv"
+        "docker"
+        "docker-compose"
+        "kubectl"
+        "helm"
+        "terraform"
+        "aws"
+        "gcloud"
+        "azure"
+        "ansible"
+        "python"
+        "pip"
+        "node"
+        "npm"
+        "yarn"
+        "golang"
+        "rust"
+        "sudo"
+        "extract"
+        "history"
+        "command-not-found"
+        "colored-man-pages"
+        # "you-should-use"
+        # "zsh-bat"
+        # "fzf-tab"
+        "copyfile"
+        "copypath"
       ];
     };
     plugins = with pkgs; [
@@ -76,7 +103,37 @@
           rev = "v1.0";
           hash = "sha256-d0MD3D4xiYVhMIjAW4npdtwHSobq6yEqyeSbOPq3aQM=";
         };
-        file = "notify.plugin.zsh";
+        file = "zsh-notify.plugin.zsh";
+      }
+      {
+        name = "fzf-tab";
+        src = fetchFromGitHub {
+          owner = "aloxaf";
+          repo = "fzf-tab";
+          rev = "v1.3.0";
+          hash = "sha256-8atbysoOyCBW2OYKmdc91x9V/Mk3eyg3hvzvhJpQ32w=";
+        };
+        file = "fzf-tab.plugin.zsh";
+      }
+      {
+        name = "zsh-bat";
+        src = fetchFromGitHub {
+          owner = "fdellwing";
+          repo = "zsh-bat";
+          rev = "4673376";
+          hash = "sha256-TTuYZpev0xJPLgbhK5gWUeGut0h7Gi3b+e00SzFvSGo=";
+        };
+        file = "zsh-bat.plugin.zsh";
+      }
+      {
+        name = "zsh-you-should-use";
+        src = fetchFromGitHub {
+          owner = "MichaelAquilina";
+          repo = "zsh-you-should-use";
+          rev = "1.11.1";
+          hash = "sha256-a/DNVxD55Bh6AmSh5C4z4JpZM5xUiQgoaFoDgYPQsbo=";
+        };
+        file = "you-should-use.plugin.zsh";
       }
     ];
 
@@ -109,14 +166,6 @@
       bindkey '^U' autosuggest-accept
       bindkey '^F' fzf-open
 
-
-      zstyle ':notify:*' success-title "✓ Finished (#{time_elapsed}s)"
-      zstyle ':notify:*' success-msg "#{command} completed successfully."
-
-      zstyle ':notify:*' error-title "✕ Failed after #{time_elapsed}s"
-      zstyle ':notify:*' error-msg "#{command} failed with code #{exit_code}."
-
-      zstyle ':notify:*' command-complete-timeout 5
     '';
 
     # kitty +kitten icat --align right -n $(shuf -n 1 /mnt/win1/Myself/Pokemon/pokemon_gifs.txt)
