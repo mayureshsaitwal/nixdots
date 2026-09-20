@@ -16,6 +16,7 @@
     ./hipatterns.nix
     # ./icons.nix
     ./indentscope.nix
+    ./modicator.nix
     ./move.nix
     ./notify.nix
     ./pairs.nix

@@ -96,6 +96,11 @@
       showmode = true;
 
       list = true; # sets neovim display whitespace
+      listchars = {
+        tab = "· ";
+        trail = "×";
+        nbsp = "␣";
+      };
     };
   };
 }

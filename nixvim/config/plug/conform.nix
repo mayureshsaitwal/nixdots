@@ -3,6 +3,7 @@
   extraPackages = with pkgs; [ shfmt ];
   plugins.conform-nvim = {
     enable = true;
+    autoInstall.enable = true;
 
     lazyLoad.settings = {
       cmd = [
@@ -19,7 +20,7 @@
       notify_on_error = true;
 
       formatters_by_ft = {
-        liquidsoap = [ "liquidsoap-prettier" ];
+        liquidsoap = [ "liquidsoap" ];
         html = [
           [
             "prettierd"
