@@ -4,25 +4,33 @@ hl.window_rule({
 		class = "org.telegram.desktop",
 	},
 	workspace = "9 silent",
+})
 
+hl.window_rule({
 	name = "discord-workspace",
 	match = {
 		class = "discord",
 	},
 	workspace = "8 silent",
+})
 
+hl.window_rule({
 	name = "qbittorrent-workspace",
 	match = {
-		class = "org.qbittorrent.qbittorrent",
+		class = "org.qbittorrent.qBittorrent",
 	},
 	workspace = "7 silent",
+})
 
+hl.window_rule({
 	name = "qbittorrent-float",
 	match = {
-		class = "org.qbittorrent.qbittorrent",
+		class = "org.qbittorrent.qBittorrent",
 	},
 	float = true,
+})
 
+hl.window_rule({
 	name = "steam",
 	match = {
 		class = "steam",
@@ -30,32 +38,9 @@ hl.window_rule({
 	float = true,
 })
 
--- hl.window_rule({ name = "kitty_starting_width", match = { class = "kitty" }, scrolling_width = 0.75 })
-
--- windowrule=opacity 0.95,workspace:[0-9]
-
--- windowrulev2=workspace 9 silent,class:org.telegram.desktop
-
--- windowrulev2=workspace 8 silent,class:discord
-
--- windowrule=workspace 6 silent,class:docker desktop
-
--- windowrule=workspace 10 silent,spotify
-
--- windowrule=workspace 7 silent,class:obsidian
-
--- windowrule=workspace 6 silent,notion-app-enhanced
-
--- #windowrule=opacity 0.9,obsidian
-
--- #windowrule=opacity 0.9,firefox
-
--- windowrule=opacity 0.9,zen
-
--- windowrule=opacity 0.1,launcher
-
--- windowrulev2=float,class:tk
-
--- windowrulev2=float,class:toplevel
-
--- layerrule = blur,launcher
+-- hl.layer_rule({
+-- 	match = { namespace = "launcher" },
+-- 	blur = true,
+-- 	-- ignore_alpha = 0.5,
+-- 	-- dim_around = true,
+-- })

@@ -9,5 +9,5 @@ hl.on("hyprland.start", function()
 
 	hl.exec_cmd("hyprpaper")
 	-- exec-once=obsidian
-	hl.exec_cmd("hyprctl setcursor bibata-modern-ice 24")
+	-- hl.exec_cmd("hyprctl setcursor bibata-modern-ice 24")
 end)

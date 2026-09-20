@@ -41,7 +41,7 @@ hl.bind(mainmod .. " + SHIFT + l", hl.dsp.layout("swapcol r"))
 hl.bind(mainmod .. " + SHIFT + h", hl.dsp.layout("swapcol l"))
 
 -- window resize
-hl.bind(mainmod .. "+ equal", hl.dsp.layout("colresize +conf"))
+hl.bind(mainmod .. "+ R", hl.dsp.layout("colresize +conf"))
 
 -- switch workspaces with mainmod + [0-9]
 

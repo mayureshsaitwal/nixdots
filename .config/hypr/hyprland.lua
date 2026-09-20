@@ -11,6 +11,7 @@ require("inputs")
 require("monitor")
 require("rules")
 require("keybinds")
+require("plugins")
 
 -- hl.monitor({
 -- 	output = "",
