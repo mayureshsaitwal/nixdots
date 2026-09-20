@@ -2,6 +2,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("discord")
 
 	hl.exec_cmd("telegram-desktop")
+	hl.exec_cmd("Telegram")
 
 	hl.exec_cmd("telegram")
 
