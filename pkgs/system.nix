@@ -59,6 +59,7 @@
     gdb
 
     pulseaudio
+		pavucontrol
     bat
     # nil
     # at
