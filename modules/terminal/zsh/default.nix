@@ -68,12 +68,55 @@
         };
         file = "fast-syntax-highlighting.plugin.zsh";
       }
+      {
+        name = "zsh-notify";
+        src = fetchFromGitHub {
+          owner = "marzocchi";
+          repo = "zsh-notify";
+          rev = "v1.0";
+          hash = "sha256-d0MD3D4xiYVhMIjAW4npdtwHSobq6yEqyeSbOPq3aQM=";
+        };
+        file = "notify.plugin.zsh";
+      }
     ];
 
     initContent = ''
+
+      fzf-open() {
+        local selected
+
+      selected=$(
+        find . \( -type f -o -type d \) -not -path './.git/*' |
+          fzf \
+            --no-sort \
+            --layout=reverse \
+            --height=50% \
+            --border
+        ) || return
+
+        if [[ -d "$selected" ]]; then
+          cd -- "$selected"
+        else
+          nvim -- "$selected"
+        fi
+
+        zle reset-prompt
+      }
+
+      zle -N fzf-open
       source ${./alias.zsh}
       autopair-init
       bindkey '^U' autosuggest-accept
+      bindkey '^F' fzf-open
+
+
+      zstyle ':notify:*' success-title "✓ Finished (#{time_elapsed}s)"
+      zstyle ':notify:*' success-msg "#{command} completed successfully."
+
+      zstyle ':notify:*' error-title "✕ Failed after #{time_elapsed}s"
+      zstyle ':notify:*' error-msg "#{command} failed with code #{exit_code}."
+
+      zstyle ':notify:*' command-complete-timeout 5
     '';
 
     # kitty +kitten icat --align right -n $(shuf -n 1 /mnt/win1/Myself/Pokemon/pokemon_gifs.txt)
@@ -114,19 +157,19 @@
   #   enableZshIntegration = true;
   # };
 
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-    defaultOptions = [
-      "--height 50%"
-      "--layout=reverse"
-      "--border"
-      "--ansi"
-      "--preview 'cat {}'"
-      "--color=bg+:#293739,bg:#1B1D1E,border:#808080,spinner:#E6DB74,hl:#7E8E91,fg:#F8F8F2,header:#7E8E91,info:#A6E22E,pointer:#A6E22E,marker:#F92672,fg+:#F8F8F2,prompt:#F92672,hl+:#F92672"
-    ];
-  };
-
+  # programs.fzf = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  #   defaultOptions = [
+  #     "--height 50%"
+  #     "--layout=reverse"
+  #     "--border"
+  #     "--ansi"
+  #     "--preview 'cat {}'"
+  #     "--color=bg+:#293739,bg:#1B1D1E,border:#808080,spinner:#E6DB74,hl:#7E8E91,fg:#F8F8F2,header:#7E8E91,info:#A6E22E,pointer:#A6E22E,marker:#F92672,fg+:#F8F8F2,prompt:#F92672,hl+:#F92672"
+  #   ];
+  # };
+  #
   # Prevent the new user dialog in zsh
   # system.userActivationScripts.zshrc = "touch .zshrc";
 }
