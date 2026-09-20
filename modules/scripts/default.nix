@@ -1,5 +1,5 @@
-_ : {
-    imports = [
-      ./hotspot.nix
-    ];
-  } 
+_: {
+  imports = [
+    ./hotspot.nix
+  ];
+}

@@ -2,7 +2,7 @@ _: {
   imports = [
     # ./systemd
     # ./services
-    ./wm/hyprland
+    ./wm/drivers.nix
     ./scripts
     ./gaming
     ./peripherals
