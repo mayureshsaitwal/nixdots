@@ -96,23 +96,6 @@
       ];
     };
   };
-  #   services.resolved = {
-  #   enable = true;
-  #   fallbackDns = [ "1.1.1.1" "8.8.8.8" ];
-  # };
-  # services.resolved.enable = true;
-
-  services.resolved = {
-    enable = true;
-    settings = {
-      Resolve = {
-        FallbackDNS = [
-          "1.1.1.1"
-          "8.8.8.8"
-        ];
-      };
-    };
-  };
 
   # Enable Bluetooth
   hardware.bluetooth = {
@@ -124,8 +107,113 @@
       };
     };
   };
+  services = {
+    #   services.resolved = {
+    #   enable = true;
+    #   fallbackDns = [ "1.1.1.1" "8.8.8.8" ];
+    # };
+    # services.resolved.enable = true;
 
-  services.blueman.enable = true;
+    resolved = {
+      enable = true;
+      settings = {
+        Resolve = {
+          FallbackDNS = [
+            "1.1.1.1"
+            "8.8.8.8"
+          ];
+        };
+      };
+    };
+
+    blueman.enable = true;
+    # Enable the X11 windowing system.
+    #services.xserver.enable = true;
+
+    # Enable the GNOME Desktop Environment.
+    #services.xserver.displayManager.gdm.enable = true;
+    #services.xserver.desktopManager.gnome.enable = true;
+
+    # Configure keymap in X11
+    xserver.xkb = {
+      layout = "us";
+      variant = "";
+    };
+    haveged.enable = true;
+
+    # Enable CUPS to print documents.
+    printing.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+      wireplumber.enable = true;
+      extraConfig.pipewire."10-speakers-headphones" = {
+        "context.modules" = [
+          {
+            name = "libpipewire-module-loopback";
+            args = {
+              "node.name" = "speakers";
+              "node.description" = "Speakers";
+              "capture.props" = {
+                "media.class" = "Audio/Sink";
+                "audio.position" = [
+                  "FL"
+                  "FR"
+                ];
+              };
+              "playback.props" = {
+                "target.object" = "alsa_output.pci-0000_09_00.4.analog-stereo";
+                "stream.dont-remix" = true;
+                "node.passive" = true;
+                "audio.position" = [
+                  "FL"
+                  "FR"
+                ];
+              };
+            };
+          }
+          {
+            name = "libpipewire-module-loopback";
+            args = {
+              "node.name" = "headphones";
+              "node.description" = "Headphones";
+              "capture.props" = {
+                "media.class" = "Audio/Sink";
+                "audio.position" = [
+                  "FL"
+                  "FR"
+                ];
+              };
+              "playback.props" = {
+                # Match this name to your actual sound card output sink from `wpctl status`
+                "target.object" = "alsa_output.pci-0000_09_00.4.analog-stereo";
+                "stream.dont-remix" = true;
+                "node.passive" = true;
+                "audio.position" = [
+                  "RL"
+                  "RR"
+                ];
+              };
+            };
+          }
+        ];
+      };
+    };
+
+    # Enable touchpad support (enabled default in most desktopManager).
+    libinput.enable = true;
+
+    # nixpkgs.config.packageOverrides = pkgs: {
+    #   mpvpaper = pkgs.callPackage ../../custompkgs/mpvpaper/default.nix { };
+    # };
+
+    devmon.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
+  };
   # services.gnome.gnome-keyring.enable = true;
   # security.pam.services.login.enableGnomeKeyring = true;
 
@@ -133,55 +221,29 @@
   time.timeZone = "Asia/Kolkata";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_IN";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_IN";
-    LC_IDENTIFICATION = "en_IN";
-    LC_MEASUREMENT = "en_IN";
-    LC_MONETARY = "en_IN";
-    LC_NAME = "en_IN";
-    LC_NUMERIC = "en_IN";
-    LC_PAPER = "en_IN";
-    LC_TELEPHONE = "en_IN";
-    LC_TIME = "en_IN";
+  i18n = {
+    defaultLocale = "en_IN";
+    extraLocales = [
+      "en_IN/UTF-8"
+    ];
+    # extraLocaleSettings = {
+    #   LC_ADDRESS = "en_IN.UTF-8";
+    #   LC_IDENTIFICATION = "en_IN.UTF-8";
+    #   LC_MEASUREMENT = "en_IN.UTF-8";
+    #   LC_MONETARY = "en_IN.UTF-8";
+    #   LC_NAME = "en_IN.UTF-8";
+    #   LC_NUMERIC = "en_IN.UTF-8";
+    #   LC_PAPER = "en_IN.UTF-8";
+    #   LC_TELEPHONE = "en_IN.UTF-8";
+    #   LC_TIME = "en_IN.UTF-8";
+    # };
   };
 
-  # Enable the X11 windowing system.
-  #services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  #services.xserver.displayManager.gdm.enable = true;
-  #services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-  services.haveged.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  hardware.alsa.enablePersistence = true;
 
   # Enable sound with pipewire.
   # hardware.pulseaudio.enable = false;
-  # security.rtkit.enable = true;
-  # services.pipewire = {
-  #   enable = true;
-  #   alsa.enable = true;
-  #   alsa.support32Bit = true;
-  #   pulse.enable = true;
-  #   # If you want to use JACK applications, uncomment this
-  #   #jack.enable = true;
-  #
-  #   # use the example session manager (no others are packaged yet so this is enabled by default,
-  #   # no need to redefine it in your config for now)
-  #   #media-session.enable = true;
-  # };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
+  security.rtkit.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${main.username} = {
@@ -224,14 +286,6 @@
     wget
     git
   ];
-
-  # nixpkgs.config.packageOverrides = pkgs: {
-  #   mpvpaper = pkgs.callPackage ../../custompkgs/mpvpaper/default.nix { };
-  # };
-
-  services.devmon.enable = true;
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
 
   # Zshrc
   # system.userActivationScripts.zshrc = "touch $ZDOTDIR/.zshrc";
