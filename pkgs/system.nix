@@ -44,6 +44,7 @@
     haveged
     jq
     net-tools
+    alsa-utils
 
     zsh-fast-syntax-highlighting
     zsh-autosuggestions
@@ -58,7 +59,7 @@
     cmake
     gdb
 
-    pulseaudio
+    # pulseaudio
     pavucontrol
     bat
     # nil
