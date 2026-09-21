@@ -15,7 +15,7 @@
     };
 
     script = ''
-      lnxrouter --ap wlo1 "Munni Badnaam Hui, Router Ke Liye" -p "Qwerty?123" --daemon
+      lnxrouter --ap wlo1 "Kitne GB The? - Poore 50GB" -p "Qwerty?123" --daemon
     '';
   };
 }
