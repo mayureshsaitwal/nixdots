@@ -219,6 +219,8 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
+  time.hardwareClockInLocalTime = true;
+  services.timesyncd.enable = true;
 
   # Select internationalisation properties.
   i18n = {
