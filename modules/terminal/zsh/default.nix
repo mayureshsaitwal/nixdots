@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   # home.sessionPath = [
   #   "$HOME/bin"
@@ -45,6 +50,7 @@
       plugins = [
         "git"
         "direnv"
+        "bgnotify"
         "docker"
         "docker-compose"
         "kubectl"
@@ -66,9 +72,6 @@
         "history"
         "command-not-found"
         "colored-man-pages"
-        # "you-should-use"
-        # "zsh-bat"
-        # "fzf-tab"
         "copyfile"
         "copypath"
       ];
@@ -98,10 +101,10 @@
       {
         name = "zsh-notify";
         src = fetchFromGitHub {
-          owner = "marzocchi";
+          owner = "suda-3156";
           repo = "zsh-notify";
-          rev = "v1.0";
-          hash = "sha256-d0MD3D4xiYVhMIjAW4npdtwHSobq6yEqyeSbOPq3aQM=";
+          rev = "master";
+          hash = "sha256-6EGjq17jQ+1ZfuDL2HG4G8huX3ZAS3KYB/dQoacxprI=";
         };
         file = "zsh-notify.plugin.zsh";
       }
@@ -137,18 +140,31 @@
       }
     ];
 
-    initContent = ''
+    initContent = lib.mkOrder 500 ''
+      bgnotify_bell=false
+      bgnotify_threshold=4
+
+      function bgnotify_formatted {
+        # Humanly readable elapsed time
+        local elapsed="$(( $3 % 60 ))s"
+        (( $3 < 60 ))   || elapsed="$((( $3 % 3600) / 60 ))m $elapsed"
+        (( $3 < 3600 )) || elapsed="$((  $3 / 3600 ))h $elapsed"
+
+        [ $1 -eq 0 ] && title="GG EZ" || title="Skill Issue"
+        [ $1 -eq 0 ] && icon="$HOME/Downloads/dog_pass_icon.jpg" || icon="$HOME/Downloads/dog_fail_icon.webp"
+        bgnotify "$title - took ''${elapsed}" "$2" "$icon"
+      }
 
       fzf-open() {
         local selected
 
-      selected=$(
-        find . \( -type f -o -type d \) -not -path './.git/*' |
-          fzf \
-            --no-sort \
-            --layout=reverse \
-            --height=50% \
-            --border
+        selected=$(
+          find . \( -type f -o -type d \) -not -path './.git/*' |
+            fzf \
+              --no-sort \
+              --layout=reverse \
+              --height=50% \
+              --border
         ) || return
 
         if [[ -d "$selected" ]]; then
@@ -162,12 +178,9 @@
 
       zle -N fzf-open
       source ${./alias.zsh}
-      autopair-init
       bindkey '^U' autosuggest-accept
       bindkey '^F' fzf-open
-
     '';
-
     # kitty +kitten icat --align right -n $(shuf -n 1 /mnt/win1/Myself/Pokemon/pokemon_gifs.txt)
     # kitty +kitten icat --align right -n $(find /mnt/win1/Myself/Pokemon/gifs -type f | shuf -n 1)
     # NEWLINE=$'\n'

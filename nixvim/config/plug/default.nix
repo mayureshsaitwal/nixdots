@@ -17,6 +17,7 @@ _: {
     ./lualine.nix
     ./lzn.nix
     ./markview.nix
+    ./modicator.nix
     ./mini
     ./neoscroll.nix
     ./nonels.nix

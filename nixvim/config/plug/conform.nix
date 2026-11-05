@@ -23,37 +23,37 @@
         liquidsoap = [ "liquidsoap" ];
         html = [
           [
-            "prettierd"
+            # "prettierd"
             "prettier"
           ]
         ];
         css = [
           [
-            "prettierd"
+            # "prettierd"
             "prettier"
           ]
         ];
         javascript = [
           [
-            "prettierd"
+            # "prettierd"
             "prettier"
           ]
         ];
         javascriptreact = [
           [
-            "prettierd"
+            # "prettierd"
             "prettier"
           ]
         ];
         typescript = [
           [
-            "prettierd"
+            # "prettierd"
             "prettier"
           ]
         ];
         typescriptreact = [
           [
-            "prettierd"
+            # "prettierd"
             "prettier"
           ]
         ];
@@ -71,7 +71,7 @@
           ]
         ];
         yaml = [
-          "yamllint"
+          # "yamllint"
           "yamlfmt"
         ];
         terragrunt = [

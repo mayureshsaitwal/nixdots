@@ -11,6 +11,11 @@
     };
 
     nixvim.url = "./nixvim";
+    qml-language-server.url = "github:cushycush/qml-language-server";
+    apple-fonts = {
+      url = "github:Lyndeno/apple-fonts.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # alejandra.url = "github:kamadorueda/alejandra/3.0.0";
     # alejandra.inputs.nixpkgs.follows = "nixpkgs";
@@ -28,6 +33,7 @@
     {
       self,
       nixpkgs,
+      qml-language-server,
       ...
     }@inputs:
     let
@@ -52,6 +58,7 @@
               # inputs.alejandra.defaultPackage.${system}
               # inputs.nixvim.packages.${pkgs.system}.default
               inputs.nixvim.packages.${main.system}.nvim
+              inputs.qml-language-server.packages.${main.system}.default
               # inputs.zen-browser.packages."${system}".default
             ];
           }

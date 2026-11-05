@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   fonts = {
     enableDefaultPackages = true;
@@ -19,6 +19,18 @@
       nerd-fonts.jetbrains-mono
       nerd-fonts.ubuntu
       fantasque-sans-mono
+
+      inputs.apple-fonts.packages.${pkgs.system}.sf-pro
+      inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd
+
+      inputs.apple-fonts.packages.${pkgs.system}.sf-mono
+      inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd
+
+      inputs.apple-fonts.packages.${pkgs.system}.sf-compact
+      inputs.apple-fonts.packages.${pkgs.system}.sf-compact-nerd
+
+      inputs.apple-fonts.packages.${pkgs.system}.ny
+      inputs.apple-fonts.packages.${pkgs.system}.ny-nerd
     ];
 
     fontconfig = {

@@ -1,6 +1,6 @@
 _: {
   programs.kitty = {
-    enable = true;
+    enable = false;
     shellIntegration.enableZshIntegration = true;
     font.name = "FiraMono Nerd Font";
     settings = {
@@ -15,6 +15,7 @@ _: {
       cursor_trail = 3;
       cursor_trail_decay = "0.1 0.45";
       cursor_trail_start_threshold = 2;
+      single_instance = false;
     };
   };
 }
