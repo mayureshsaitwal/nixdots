@@ -3,50 +3,42 @@
   ...
 }:
 {
+  # Note: yt-dlp, mpvpaper, live-server and libnotify are already installed
+  # system-wide via ../pkgs/system.nix, so they are not duplicated here.
   home.packages = with pkgs; [
-    pulsemixer
-    kitty
-    # firefox
-    wofi
+    # Applications (messaging, files, documents)
     telegram-desktop
-    playerctl
-    # grimblast
-    #chromium
-    cliphist
-    #mpvpaper
     nautilus
-    spotdl
-    ytmdl
-    yt-dlp
-    ffmpeg_7
-    mpv
-    hyprpicker
-    mpvpaper
-    hyprpaper
-    grimblast
-    smplayer
-    # nix-init
-    # nix-update
-    # inputs.nixvim.packages.${pkgs.system}.default
-    # floorp
-    qbittorrent-enhanced
-    # eza
-    # teams-for-linux
-    localsend
-    live-server
     foliate
     exercism
+    qbittorrent-enhanced
+    localsend
+    smplayer
+
+    # Music & media
+    spotdl
+    ytmdl
+    mpv
+    playerctl
+    pulsemixer
+    ffmpeg_7
+
+    # Wayland & Hyprland ricing
+    wofi
+    hyprpicker
+    hyprpaper
+    grimblast
+    cliphist
+    quickshell
+
+    # Editors & misc
+    kitty
+    neovide
+    deadlock-mod-manager
+    polychromatic
+
+    # Secret management
     libsecret
     seahorse
-    deadlock-mod-manager
-    # AudioRelay
-
-    # openrazer-daemon
-    polychromatic
-    quickshell
-    neovide
-    libnotify
-
-    # vscode-extensions.vadimcn.vscode-lldb
   ];
 }

@@ -11,8 +11,9 @@
     ../pkgs/home.nix
   ];
 
-  #Numlock
-  xsession.numlock.enable = true;
+  # Numlock is enabled at boot system-wide via modules/scripts/numlock.nix
+  # (systemd tty service). The HM xsession.numlock option was removed because
+  # numlockx is X11-only and silently fails under Hyprland/UWSM (Wayland).
 
   home = {
     username = main.username;
@@ -127,30 +128,8 @@
   #    "Xft.dpi" = 172;
   #  };
 
-  # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    zip
-    xz
-    unzip
-    p7zip
-
-    ripgrep
-    eza
-
-    cowsay
-    file
-    which
-    tree
-
-    nix-output-monitor
-
-    btop
-
-    lm_sensors
-    ethtool
-    pciutils # lspci
-    usbutils # lsusb
-  ];
+  # System tools (zip, ripgrep, btop, pciutils, etc.) are installed
+  # system-wide via ../pkgs/system.nix — no need to duplicate them per-user.
 
   # home-manager.backupFileExtension = "backup";
 

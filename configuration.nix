@@ -139,7 +139,8 @@
       layout = "us";
       variant = "";
     };
-    haveged.enable = true;
+
+    # haveged removed: no-op on kernels >= 5.6 (kernel handles entropy)
 
     # Enable CUPS to print documents.
     printing.enable = true;

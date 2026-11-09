@@ -1,70 +1,107 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    # Meta: core utilities
     git
     curl
+    wget
     vim
     man
-    wget
-    ntfs3g
+    which
+    file
     tree
     zip
-    xz
     unzip
+    xz
     p7zip
-    ripgrep
+
+    # Terminal & shell
     eza
-    # fzf
-    cowsay
-    file
-    which
+    ripgrep
     fd
-    tree
-    nix-output-monitor
+    bat
+    jq
+    cowsay
+    stow
+    lazygit
+    zsh-fast-syntax-highlighting
+    zsh-autosuggestions
+
+    # System monitoring & hardware info
     btop
     lm_sensors
     ethtool
     pciutils
     usbutils
+
+    # Networking & storage
+    iw
+    net-tools
+    wifitui
+    hostapd
+    linux-router
+    util-linux
+    ntfs3g
+    go-mtpfs
     gvfs
     udisks
     udiskie
+
+    # Wayland & desktop ricing
     wl-clipboard
     wofi-emoji
-    btop
-    brave
-    libnotify
-    # eww
     mako
     tofi
-    nh
-    # nvd
-    iw
-    hostapd
-    haveged
-    jq
-    net-tools
+    libnotify
+    feh
+    nsxiv
+    bibata-cursors
+    colorls
+
+    # Applications
+    brave
+    chromium
+    vlc
+    obsidian
+    discord
+
+    # Media & music
+    mpvpaper
+    yt-dlp
+    ffmpeg
+
+    # Audio
     alsa-utils
+    pavucontrol
 
-    zsh-fast-syntax-highlighting
-    zsh-autosuggestions
-
+    # Development toolchain
+    direnv
     rustc
     cargo
     gnumake
-    # spotify
-    direnv
-    clang-tools
     clang
+    clang-tools
     cmake
     gdb
+    libgcc
+    gcc
+    nodejs
+    yarn
 
-    # pulseaudio
-    pavucontrol
-    bat
-    # nil
-    # at
+    # Language servers & formatters
+    stylua
+    nixfmt
+    prettier
+    prettierd
+    lua-language-server
+    basedpyright
+    rustfmt
+    rust-analyzer
+    javascript-typescript-langserver
+    ruff
+    vale
 
+    # Python environment
     (python313.withPackages (
       ps: with ps; [
         pandas
@@ -85,73 +122,20 @@
         # python-lsp-ruff
       ]
     ))
-    # quarto
+
+    # Nix tooling
+    nh
+    nix-output-monitor
+    nix-prefetch-github
+
+    # Editor extras
     vimPlugins.friendly-snippets
     live-server
-    stylua
-    nixfmt
-    prettierd
-    prettier
-    basedpyright
-    clang-tools
-    lua-language-server
-    rustfmt
-    rust-analyzer
-    javascript-typescript-langserver
 
-    # neovim-remote
-
-    nodejs
-    yarn
-    # nodePackages.pnpm
-    # nodePackages.live-server
-
-    mpvpaper
-    yt-dlp
-    obsidian
-    # yazi
-    chromium
-    nix-prefetch-github
-    # fira-code-nerdfont
-    # commit-mono
-    go-mtpfs
-    libgcc
-    gcc
-    linux-router
-    # chafa
-    # thefuck
-    # eza
-    # nurl
-    discord
-    # pkgs.nixfmt
-
-    vlc
-    # gifsicle
-    black
-    isort
-    ruff
-    vale
-    # nodePackages.jsonlint
-    # ruff-lsp
-
-    stow
-    lazygit
-    # taskwarrior3
-
-    nsxiv
-    feh
-    # impala
-    wifitui
-    yt-dlp
-    ffmpeg
-
+    # Gaming
     gamemode
     mangohud
     heroic
     lutris
-    bibata-cursors
-    lazygit
-    colorls
-    util-linux
   ];
 }
