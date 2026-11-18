@@ -21,7 +21,6 @@
     mpv
     playerctl
     pulsemixer
-    ffmpeg_7
 
     # Wayland & Hyprland ricing
     wofi

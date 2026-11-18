@@ -1,8 +1,6 @@
 _: {
   imports = [
-    # ./systemd
-    # ./services
-    ./wm/drivers.nix
+    ./nvidia
     ./scripts
     ./gaming
     ./peripherals

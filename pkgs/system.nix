@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     # Meta: core utilities
-    git
     curl
     wget
     vim
@@ -24,8 +23,8 @@
     cowsay
     stow
     lazygit
-    zsh-fast-syntax-highlighting
-    zsh-autosuggestions
+    # zsh-fast-syntax-highlighting
+    # zsh-autosuggestions
 
     # System monitoring & hardware info
     btop
@@ -55,7 +54,6 @@
     libnotify
     feh
     nsxiv
-    bibata-cursors
     colorls
 
     # Applications
@@ -124,7 +122,6 @@
     ))
 
     # Nix tooling
-    nh
     nix-output-monitor
     nix-prefetch-github
 

@@ -1,4 +1,7 @@
 { inputs, pkgs, ... }:
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
   fonts = {
     enableDefaultPackages = true;
@@ -20,25 +23,26 @@
       nerd-fonts.ubuntu
       fantasque-sans-mono
 
-      inputs.apple-fonts.packages.${pkgs.system}.sf-pro
-      inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd
+      inputs.apple-fonts.packages.${system}.sf-pro
+      inputs.apple-fonts.packages.${system}.sf-pro-nerd
 
-      inputs.apple-fonts.packages.${pkgs.system}.sf-mono
-      inputs.apple-fonts.packages.${pkgs.system}.sf-mono-nerd
+      inputs.apple-fonts.packages.${system}.sf-mono
+      inputs.apple-fonts.packages.${system}.sf-mono-nerd
 
-      inputs.apple-fonts.packages.${pkgs.system}.sf-compact
-      inputs.apple-fonts.packages.${pkgs.system}.sf-compact-nerd
+      inputs.apple-fonts.packages.${system}.sf-compact
+      inputs.apple-fonts.packages.${system}.sf-compact-nerd
 
-      inputs.apple-fonts.packages.${pkgs.system}.ny
-      inputs.apple-fonts.packages.${pkgs.system}.ny-nerd
+      inputs.apple-fonts.packages.${system}.ny
+      inputs.apple-fonts.packages.${system}.ny-nerd
     ];
 
     fontconfig = {
       enable = true;
       defaultFonts = {
-        monospace = [ "ubuntu-mono" ];
-        sansSerif = [ "ubuntu-sans" ];
-        serif = [ "ubuntu" ];
+        serif = [ "Noto Serif" ];
+        sansSerif = [ "Noto Sans" ];
+        monospace = [ "JetBrainsMono Nerd Font" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };

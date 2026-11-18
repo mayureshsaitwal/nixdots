@@ -7,47 +7,15 @@
 {
   imports = [
     ./hardware-configuration.nix
-
-    # System Packages
-    ./pkgs/system.nix
-
-    # System
-    ./modules/system.nix
-
-    # Fonts
     ./fonts.nix
-
-    # NH
-    ./nh.nix
-
-    # Environment Variable
-    # ./envVar.nix
-
-    # Services
-    # ../../modules/services
-    # ../../services/default.nix
-
-    # All system services
-    # ../../modules/system.nix
-
-    # Overlays
-    # ./overlays.nix
+    ./pkgs/system.nix
+    ./modules/system
   ];
 
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
-
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs main;
-    };
-    users = {
-      "${main.username}" = import ./home;
-    };
-    backupFileExtension = "backup";
-  };
 
   documentation.doc.enable = false;
 
@@ -59,7 +27,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = main.hostname; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -68,6 +35,7 @@
 
   # Enable networking
   networking = {
+    hostName = main.hostname;
     networkmanager.enable = true;
     networkmanager.dns = "systemd-resolved";
     firewall = {
@@ -121,6 +89,8 @@
     };
 
     blueman.enable = true;
+    # Needed by libsecret (git credential helper) and the Niri portals.
+    gnome.gnome-keyring.enable = true;
     # Enable the X11 windowing system.
     #services.xserver.enable = true;
 
@@ -143,7 +113,7 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      jack.enable = true;
+      # jack.enable = true;
       wireplumber.enable = true;
       extraConfig.pipewire."10-speakers-headphones" = {
         "context.modules" = [
@@ -205,13 +175,13 @@
     gvfs.enable = true;
     udisks2.enable = true;
   };
-  # services.gnome.gnome-keyring.enable = true;
   # security.pam.services.login.enableGnomeKeyring = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
   time.hardwareClockInLocalTime = true;
-  services.timesyncd.enable = true;
+  # services.timesyncd.enable is already true on real hardware; qemu-vm sets it
+  # to false for build-vm, so an explicit `true` here makes VM builds conflict.
 
   # Select internationalisation properties.
   i18n = {
@@ -228,7 +198,7 @@
   security.rtkit.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${main.username} = {
+  users.users."jd1t" = {
     isNormalUser = true;
     description = "jd1t";
     extraGroups = [
@@ -241,6 +211,7 @@
     #   #  thunderbird
     # ];
   };
+  # Needed for users shell
   programs.zsh.enable = true;
 
   security.sudo.wheelNeedsPassword = true;
@@ -248,10 +219,14 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
+    xwayland-satellite
   ];
+
+  # Niri is the active compositor. Hyprland stays available in the tree but is
+  # disabled, so it can be re-enabled later without restoring the rest of the
+  # Hyprland-only tooling.
+  programs.niri.enable = true;
+  programs.hyprland.enable = false;
 
   # Zshrc
   # system.userActivationScripts.zshrc = "touch $ZDOTDIR/.zshrc";
@@ -278,11 +253,24 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Settings that only apply to `nixos-rebuild build-vm`. They are ignored on
+  # real hardware. Delete ./gan45ha.qcow2 after changing this block, otherwise
+  # the old disk image keeps the previous users/passwords.
+  virtualisation.vmVariant = {
+    users.users.jd1t.initialPassword = "test";
+    services.getty.autologinUser = "jd1t";
+    virtualisation = {
+      memorySize = 4096;
+      cores = 2;
+      graphics = true;
+    };
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 }
