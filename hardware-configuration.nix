@@ -13,41 +13,44 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/859e297b-724e-4b4e-9de2-a7bd9c664004";
+ fileSystems."/" =
+    { device = "/dev/disk/by-uuid/9d0dd430-0d4b-4ad0-a273-0ec7bf3de42c";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/573E-3DDC";
+    { device = "/dev/disk/by-uuid/355E-F53C";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/05416415-0d92-479c-80cd-5d2a36818699";
+    { device = "/dev/disk/by-uuid/07bc5a1c-8848-4de1-a889-d894dc818ae2";
       fsType = "ext4";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/5c5813f8-7022-4e6f-8890-e3156c8cf0b1"; }
+    [ { device = "/dev/disk/by-uuid/b96cbbcb-b6cf-4420-bdc2-d04fb5871d9c"; }
     ];
-
+  
   fileSystems."/mnt/win1" =
-    { device = "/dev/disk/by-uuid/06CE2FB0CE2F96C9";
+    { device = "/dev/disk/by-id/ata-HGST_HTS721010A9E630_JR1000D33YXGTE-part1";
       fsType = "ntfs";
+      options = [ "defaults" "nofail" ];
     };
 
   fileSystems."/mnt/win2" =
-    { device = "/dev/disk/by-uuid/0880AE1480AE07F0";
+    { device = "/dev/disk/by-id/ata-HGST_HTS721010A9E630_JR1000D33YXGTE-part2";
       fsType = "ntfs";
+      options = [ "defaults" "nofail" ];
     };
 
-      fileSystems."/mnt/win3" =
-    { device = "/dev/disk/by-uuid/7CB45F57B45F12CE";
-      fsType = "ntfs";
-    };
-
+#      fileSystems."/mnt/win3" =
+#    { device = "/dev/disk/by-id/nvme-WDC_WDS500G2B0C-00PXH0_2052G1442606_1-part2";
+#      fsType = "ntfs";
+#      options = [ "defaults" "nofail" ];
+#    };
+#
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

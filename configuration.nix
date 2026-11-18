@@ -6,19 +6,13 @@
 }:
 {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    # ./modules/git/default.nix
-    # inputs.home-manager.nixosModules.default
 
     # System Packages
     ./pkgs/system.nix
 
     # System
     ./modules/system.nix
-
-    # Hyprland
-    # ../../modules/wm/hyprland
 
     # Fonts
     ./fonts.nix
@@ -207,10 +201,6 @@
     # Enable touchpad support (enabled default in most desktopManager).
     libinput.enable = true;
 
-    # nixpkgs.config.packageOverrides = pkgs: {
-    #   mpvpaper = pkgs.callPackage ../../custompkgs/mpvpaper/default.nix { };
-    # };
-
     devmon.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
@@ -229,17 +219,6 @@
     extraLocales = [
       "en_IN/UTF-8"
     ];
-    # extraLocaleSettings = {
-    #   LC_ADDRESS = "en_IN.UTF-8";
-    #   LC_IDENTIFICATION = "en_IN.UTF-8";
-    #   LC_MEASUREMENT = "en_IN.UTF-8";
-    #   LC_MONETARY = "en_IN.UTF-8";
-    #   LC_NAME = "en_IN.UTF-8";
-    #   LC_NUMERIC = "en_IN.UTF-8";
-    #   LC_PAPER = "en_IN.UTF-8";
-    #   LC_TELEPHONE = "en_IN.UTF-8";
-    #   LC_TIME = "en_IN.UTF-8";
-    # };
   };
 
   hardware.alsa.enablePersistence = true;
@@ -262,28 +241,12 @@
     #   #  thunderbird
     # ];
   };
+  programs.zsh.enable = true;
 
   security.sudo.wheelNeedsPassword = true;
 
-  # security.sudo.extraRules = [
-  #   {
-  #     groups = [ "wheel" ];
-  #     commands = [ "/home/jd1t/bin/hotspot" ];
-  #   }
-  #   # { groups = [ "wheel" ]; commands = [ "/bin/light" ]; }
-  # ];
-
-  # Install Zsh
-  programs.zsh.enable = true;
-
-  # Install firefox.
-  # programs.firefox.enable = true;
-
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget

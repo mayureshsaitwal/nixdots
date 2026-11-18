@@ -1,5 +1,5 @@
-require("plugins/scrolloverview")
-require("plugins/hyprglass")
+-- require("plugins/scrolloverview")
+-- require("plugins/hyprglass")
 
 -- -- Scroll Overview
 -- local plugin = ".config/hypr/plugins/libscrolloverview.so"

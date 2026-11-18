@@ -13,7 +13,7 @@ hl.config({
 			natural_scroll = false,
 		},
 
-		sensitivity = 1.25, -- -1.0 - 1.0, 0 means no modification.
+		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 		numlock_by_default = true,
 	},
 })

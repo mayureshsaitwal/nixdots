@@ -59,7 +59,7 @@
     colorls
 
     # Applications
-    brave
+    # brave
     chromium
     vlc
     obsidian

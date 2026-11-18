@@ -46,7 +46,7 @@
     {
       # formatter.${system} = inputs.alejandra;
       nixosConfigurations.${main.hostname} = nixpkgs.lib.nixosSystem {
-        system = main.system;
+        inherit (main) system;
         specialArgs = {
           inherit inputs main;
         };

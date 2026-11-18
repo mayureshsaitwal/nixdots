@@ -104,7 +104,7 @@
           owner = "suda-3156";
           repo = "zsh-notify";
           rev = "master";
-          hash = "sha256-6EGjq17jQ+1ZfuDL2HG4G8huX3ZAS3KYB/dQoacxprI=";
+          hash = "sha256-NzNRfWXRyPdfhFxf3hWqS1o39uT3QsWXINtmmFKRCvA=";
         };
         file = "zsh-notify.plugin.zsh";
       }

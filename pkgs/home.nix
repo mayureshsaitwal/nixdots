@@ -34,11 +34,12 @@
     # Editors & misc
     kitty
     neovide
-    deadlock-mod-manager
     polychromatic
+    opencode
 
     # Secret management
     libsecret
     seahorse
+
   ];
 }
